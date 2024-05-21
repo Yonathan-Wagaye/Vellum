@@ -1,0 +1,98 @@
+<section class="h-100 gradient-custom-2">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card">
+          <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height:200px;">
+            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                style="width: 150px; z-index: 1">
+              <a href="/profile/{{user._id}}/update" type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
+                style="z-index: 1;">
+                Edit profile
+              </a>
+            </div>
+            <div class="ms-3" style="margin-top: 130px;">
+              <h5>{{user.firstName}} {{user.lastName}}</h5>
+            </div>
+          </div>
+          <div class="p-4 text-black" style="background-color: #f8f9fa;">
+            <div class="d-flex justify-content-end text-center py-1">
+              <div>
+                <p class="mb-1 h5" style="padding-right: 50px;">{{posts}}</p>
+                <p class="small text-muted mb-0" style="padding-right: 50px;">Posts</p>
+              </div>
+              
+             
+            </div>
+          </div>
+          <div class="card-body p-4 text-black">
+            <div class="mb-5">
+              <p class="lead fw-normal mb-1">About</p>
+              <div class="p-4" style="background-color: #f8f9fa;">
+                {{#each abouts as |about|}}
+                <p class="font-italic mb-1">{{about}}</p>
+                {{/each}}
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="lead fw-normal mb-0">Recent posts</p>
+              
+            </div>
+           <div class="d-flex justify-content-between align-items-center mb-4">
+            <span class="fw-normal tab movie-btn">Movies</span>
+            <span class="fw-normal tab book-btn">Books</span>
+          </div>
+            <div class="post-content" id="movie-content">
+              {{#each recentMovies as |movie|}}
+                <div class="d-flex justify-content-center align-items-center" style="padding: 30px;">
+                  <div class="card" style="width: 40rem;"> <!-- Increase the width as needed -->
+                      <div class="card-body">
+                          <h5 class="card-title">{{movie.name}}</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Directed by: {{movie.director}}</h6>
+                          <h6 class="card-subtitle mb-2 text-muted">Duration: {{movie.length}} min</h6>
+                          <p class="card-text">{{movie.comment}}</p>
+                          Genre:
+                          {{#each movie.genre as |genre| }}
+                              {{genre}}|
+                          {{/each}}
+                          <br/>
+                          <br/>
+                          <a href="/deleteMovie/{{movie._id}}" class="card-link">Delete Post</a>
+                          <a href="/updateMovie/{{movie._id}}" class="card-link">Update Post</a>
+                      </div>
+                  </div>
+                </div>
+                     
+              {{/each}}
+            </div>
+            <div class="post-content" id="book-content">
+              {{#each recentBooks as |book|}}
+                <div class="d-flex justify-content-center align-items-center" style="padding: 30px;">
+                  <div class="card" style="width: 40rem;"> <!-- Increase the width as needed -->
+                    <div class="card-body">
+                      <h5 class="card-title">{{book.name}}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Written by: {{book.author}}</h6>
+                      <h6 class="card-subtitle mb-2 text-muted">Publication Year: {{book.publicationYear}}</h6>
+                      <p class="card-text">{{book.comment}}</p>
+                      Genre:
+                      {{#each book.genre as |genre| }}
+                        {{genre}}|
+                      {{/each}}
+                      <br/>
+                      <br/>
+                      <a href="/deleteBook/{{book._id}}" class="card-link">Delete Post</a>
+                      <a href="/updateBook/{{book._id}}" class="card-link">Update Post</a>
+                    </div>
+                  </div>
+                </div>
+              {{/each}}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

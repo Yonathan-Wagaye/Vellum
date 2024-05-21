@@ -1,0 +1,46 @@
+{{#each users as |user|}}
+  {{#each user.movie as |movie|}}
+  <div class="d-flex justify-content-center align-items-center" style="padding: 30px;">
+    <div class="card" style="width: 40rem;"> <!-- Increase the width as needed -->
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">Posted by: {{movie.postedBy}}</h6>
+        <h5 class="card-title">{{movie.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Directed by: {{movie.director}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Duration: {{movie.length}} min</h6>
+        <p class="card-text">{{movie.comment}}</p>
+        Genre:
+        {{#each movie.genre as |genre| }}
+          {{genre}}|
+        {{/each}}
+        <br/>
+        <br/>
+        <h6 class="card-subtitle mb-2 text-muted">Date: {{movie.createdAt}}</h6>
+        <br/>
+        <br/>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  {{#each user.books as |book|}}
+  <div class="d-flex justify-content-center align-items-center" style="padding: 30px;">
+    <div class="card" style="width: 40rem;"> <!-- Increase the width as needed -->
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">Posted by: {{book.postedBy}}</h6>
+        <h5 class="card-title">{{book.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Written by: {{book.author}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Publication Year: {{book.publicationYear}}</h6>
+        <p class="card-text">{{book.comment}}</p>
+        Genre:
+        {{#each book.genre as |genre| }}
+          {{genre}}|
+        {{/each}}
+        <br/>
+        <br/>
+        <h6 class="card-subtitle mb-2 text-muted">Date: {{book.createdAt}}</h6>
+        <br/>
+        <br/>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+{{/each}}

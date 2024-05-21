@@ -1,0 +1,44 @@
+<section class="vh-100 gradient-register">
+    <div class="update-form bg-dark">
+         
+        {{#if error}}
+            <div class="alert alert-danger custom-alert" role="alert">
+                 {{error}}
+            </div>
+        {{/if}}
+        </p>
+        <div class="form-heading">
+            <h2 class="text-center">Update Profile</h2>
+        </div>
+        <form action="" method="POST">
+            
+            <div class="form-outline form-white">
+                <input type="text" class="form-control form-control-lg" name="firstname" id="firstname" value="{{user.firstName}}"/>
+                <label for="firstname" class="form-label">First Name</label>
+            </div>
+            
+
+            <div class="form-outline form-white">
+                <input type="text" class="form-control form-control-lg" name="lastname" id="lastname" value="{{user.lastName}}" />
+                <label for="lastname" class="form-label">Last Name</label>
+            </div>
+            
+            
+            <div class="form-outline form-white">
+                <input type="text" class="form-control form-control-lg" name="username" id="username" value="{{user.userName}}"/>
+                <label for="username" class="form-label">User Name</label>
+            </div>
+
+
+            <div class="form-outline form-white">
+                <textarea class="form-control form-control-lg" name="about" id="about" placeholder="Use three words (phrases) separated by commas: Web Developer,Lives in New York,Photographer" style="font-size: small;">{{user.about}}</textarea>
+                <label for="about" class="form-label">About</label>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <button type="submit" class="btn btn-outline-light btn-lg px-5 d-block mx-auto">Update</button>
+        </form>
+
+    </div>
+</section>

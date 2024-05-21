@@ -1,0 +1,43 @@
+<section class="vh-100 gradient-register">
+    <div class="registration-from bg-dark">
+         
+        {{#if error}}
+            <div class="alert alert-danger custom-alert" role="alert">
+                 {{error}}
+            </div>
+        {{/if}}
+        </p>
+        <div class="form-heading">
+            <h2 class="text-center">Create User</h2>
+        </div>
+        <form action="" method="POST">
+            
+            <div class="form-outline form-white">
+                <input type="text" class="form-control form-control-lg" name="firstname" id="firstname"/>
+                <label for="firstname" class="form-label">First Name</label>
+            </div>
+            
+
+            <div class="form-outline form-white">
+                <input type="text" class="form-control form-control-lg" name="lastname" id="lastname" />
+                <label for="lastname" class="form-label">Last Name</label>
+            </div>
+            
+            
+            <div class="form-outline form-white">
+                <input type="text" class="form-control form-control-lg" name="username" id="username" />
+                <label for="username" class="form-label">User Name</label>
+            </div>
+
+
+            <div class="form-outline form-white">
+                <input type="password" class="form-control form-control-lg" name="password" id="password" />
+                <label for="password" class="form-label">Password</label>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-outline-light btn-lg px-5 d-block mx-auto">Sign Up</button>
+        </form>
+
+        <p class="text-center"> Already have an account? <a class="text-white-50 fw-bold"href="/login">Login</a></p>
+    </div>
+</section>

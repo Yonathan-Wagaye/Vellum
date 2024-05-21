@@ -1,0 +1,40 @@
+<div class="container add-movie-container">
+  <div class="row justify-content-center">
+    {{#if error}}
+            <div class="alert alert-danger custom-alert" role="alert">
+                 {{error}}
+            </div>
+    {{/if}}
+    <div class="col-md-6">
+     <h2 class="fw-bold text-center" style="padding: 10px; color:rgba(193, 53, 132, 1)">Book Post</h2> 
+      <form action="" method="POST">
+        <div class="mb-3">
+          <label for="bookname" class="form-label">Book Name</label>
+          <input type="text" class="form-control" id="bookname" name="bookname" value=""/>
+        </div>
+        <div class="mb-3">
+          <label for="author" class="form-label">Author</label>
+          <input type="text" class="form-control" id="author" name="author" value=""/>
+        </div>
+        <div class="mb-3">
+          <label for="year" class="form-label">Publication Year</label>
+          <input type="text" class="form-control" id="year" name="year" value="">
+        </div>
+
+        <div class="mb-3">
+          <label for="genre" class="form-label">Genre</label>
+          <input type="text" class="form-control" id="genre" name="genre" value="" placeholder="Seprated by commas: Fantansy,Mystery,Thriller">
+        </div>
+
+        <div class="mb-3">
+          <label for="comment" class="form-label">Comment</label>
+          <textarea id="comment" name="comment" class="form-control"></textarea>
+        </div> 
+        <button type="submit" class="btn btn-dark btn-lg px-5 d-block mx-auto">Post</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+

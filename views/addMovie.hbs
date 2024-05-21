@@ -1,0 +1,43 @@
+<div class="container add-movie-container">
+  <div class="row justify-content-center">
+    {{#if error}}
+            <div class="alert alert-danger custom-alert" role="alert">
+                 {{error}}
+            </div>
+    {{/if}}
+    <div class="col-md-6">
+     <h2 class="fw-bold text-center" style="padding: 10px; color:rgba(193, 53, 132, 1)">Movie Post</h2> 
+      <form action="" method="POST">
+        <div class="mb-3">
+          <label for="moviename" class="form-label">Movie Name</label>
+          <input type="text" class="form-control" id="moviename" name="moviename" value=""/>
+        </div>
+        <div class="mb-3">
+          <label for="director" class="form-label">Director</label>
+          <input type="text" class="form-control" id="director" name="director" value=""/>
+        </div>
+        <div class="mb-3">
+          <label for="year" class="form-label">Release Year</label>
+          <input type="text" class="form-control" id="year" name="year" value="">
+        </div>
+        <div class="mb-3">
+          <label for="length" class="form-label">Duration</label>
+          <input type="text" class="form-control" id="length" name="length" value="">
+        </div>
+
+        <div class="mb-3">
+          <label for="genre" class="form-label">Genre</label>
+          <input type="text" class="form-control" id="genre" name="genre" value="" placeholder="Seprated by commas: Action,Comedy,Thriller">
+        </div>
+
+        <div class="mb-3">
+          <label for="comment" class="form-label">Comment</label>
+          <textarea id="comment" name="comment" class="form-control"></textarea>
+        </div> 
+        <button type="submit" class="btn btn-dark btn-lg px-5 d-block mx-auto">Post</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
