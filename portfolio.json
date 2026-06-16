@@ -1,0 +1,32 @@
+{
+  "title": "Vellum",
+  "description": "A social web app where users can register, log in, and share movie and book posts with profile-based updates.",
+  "detailDescription": "Vellum is a full-stack CRUD application focused on books and movies. It supports authentication, session-based access control, profile editing, and post management for both media types.",
+  "category": ["Web", "Databases"],
+  "techStack": [
+    "JavaScript",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Mongoose",
+    "Handlebars (hbs)",
+    "Bootstrap",
+    "Express Session",
+    "bcryptjs",
+    "dotenv"
+  ],
+  "features": [
+    {
+      "title": "Authentication and Sessions",
+      "description": "Users can register, log in securely, and maintain authenticated sessions."
+    },
+    {
+      "title": "Movie and Book Posts",
+      "description": "Create, edit, and delete posts for books and movies with metadata like genre, year, and comments."
+    },
+    {
+      "title": "Profile Management",
+      "description": "Users can update profile details and view recent posts in a profile dashboard."
+    }
+  ]
+}
